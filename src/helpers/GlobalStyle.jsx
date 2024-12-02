@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         max-width: 1440px;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         font-family: var(--text-font-family); 
         color: var(--first-font-color);

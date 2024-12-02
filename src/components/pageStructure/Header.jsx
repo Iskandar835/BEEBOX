@@ -20,7 +20,7 @@ function Header() {
   return (
     <Container>
       <HeaderLogo>LOGO</HeaderLogo>
-      <HeaderLink href="#">Nous contacter</HeaderLink>
+      <HeaderLink href="#">Nous Contacter</HeaderLink>
     </Container>
   );
 }
