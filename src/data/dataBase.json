@@ -1,0 +1,31 @@
+{
+    "honeys": [
+        {
+            "id": 1,
+            "name": "power",
+            "ingredients": ["miel blanc du kirghiztan", "macabio du pérou", "ginseng sibérien", "gingembre", "tribulus terrestris", "gelée royale"],
+            "pictures": {
+                "stick": "POWER-STICK.png",
+                "box": "POWER-BOX.png",
+                "effects": ["POWER-BATTERY.png", "POWER-BRAIN.png", "POWER-LIPS.png", "POWER-QUALITY.png"]
+            }
+        },
+        {
+            "id": 2,
+            "name": "lover",
+            "ingredients": ["miel rose de russie", "macabio du pérou", "ginseng sibérien", "gingembre", "tribulus terrestris", "gelée royale"],
+            "pictures": {
+                "stick": "LOVER-STICK.png",
+                "box": "LOVER-BOX.png",
+                "effects": ["LOVER-BATTERY.png", "LOVER-BRAIN.png", "LOVER-LIPS.png", "LOVER-QUALITY.png"]
+            }
+        }
+    ],
+    "contact": [
+        {
+            "id": 1,
+            "snapchat": "blablabla",
+            "qrcode": "snapchat-qrcode.png"
+        }
+    ]
+}
