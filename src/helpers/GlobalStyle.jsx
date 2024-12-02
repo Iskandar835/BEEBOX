@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        max-width: 1440px;
         margin: 0;
         padding: 0;
         font-family: var(--text-font-family); 
