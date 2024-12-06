@@ -8,13 +8,13 @@ const Container = styled.section`
   gap: 30px;
   margin: 100px 0 0 0;
 `;
-const Tilte = styled.h1`
+export const Title = styled.h1`
   margin: 0;
   font-family: var(--title-font-family);
   font-size: 36px;
   font-weight: 600;
 `;
-const Subtitle = styled.h2`
+export const Subtitle = styled.h2`
   margin: 0;
   font-size: 15px;
   font-weight: 300;
@@ -23,7 +23,7 @@ const Subtitle = styled.h2`
 function Banner() {
   return (
     <Container>
-      <Tilte>Bienvenue</Tilte>
+      <Title>Bienvenue</Title>
       <Subtitle>Découvrez nos miels</Subtitle>
     </Container>
   );
