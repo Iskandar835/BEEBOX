@@ -6,7 +6,7 @@ const Button = styled.button`
   color: var(--secondary-bg-color);
   font-weight: 600;
   font-size: 18px;
-  background: radial-gradient(var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   border: none;
   border-radius: 8px;
   box-shadow: 0 15px 60px -5px rgba(0, 0, 0, 0.9);
