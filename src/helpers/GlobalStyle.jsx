@@ -23,6 +23,9 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         background-color: var(--first-bg-color);
     }
+
+    //  fleche pour exite modale : 
+    // <i class="fa-solid fa-arrow-right-from-bracket"></i>
 `;
 
 export default GlobalStyle;

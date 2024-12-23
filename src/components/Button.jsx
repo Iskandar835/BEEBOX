@@ -2,10 +2,11 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Button = styled.button`
+  width: 220px;
   padding: 13px 25px;
-  color: var(--secondary-bg-color);
   font-weight: 600;
   font-size: 18px;
+  color: var(--secondary-bg-color);
   background: var(--primary-color);
   border: none;
   border-radius: 8px;

@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import TheButton from "../Button";
+import { ThirdTitle } from "../../pages/Honeys";
+import Copyright from "../Copyright";
 
 const FooterSection = styled.footer`
-  margin: 200px 0 0 0;
-  padding: 80px 30px 30px 30px;
-  //   background: linear-gradient(
-  //     var(--first-bg-color),
-  //     var(--secondary-color),
-  //     var(--primary-color)
-  //   );
+  margin: 150px 0 0 0;
+  padding: 80px 30px 10px 30px;
+  text-align: center;
   background: var(--secondary-bg-color);
 `;
 const TextContainer = styled.div`
@@ -16,15 +14,13 @@ const TextContainer = styled.div`
   flex-direction: column;
   gap: 15px;
 `;
-const FooterTitle = styled.h3`
-  font-family: var(--title-font-family);
-  font-size: 17px;
-  font-weight: 500;
-`;
 const FooterSubtitle = styled.p`
   font-size: 15px;
-  text-align: right;
   font-weight: 300;
+`;
+const ArrowDown = styled.i`
+  margin-top: 10px;
+  font-size: 30px;
 `;
 const ButtonContainer = styled.div`
   position: relative;
@@ -37,18 +33,20 @@ function Footer() {
   return (
     <FooterSection>
       <TextContainer>
-        <FooterTitle>
-          Notre savoir faire et notre expertise nous permettent de vous proposer
-          des miels de très bonne qualité
-        </FooterTitle>
+        <ThirdTitle>
+          Découvrez nos miels, 100 % naturels et pleins de saveurs, directement
+          issus de nos ruches.
+        </ThirdTitle>
         <FooterSubtitle>
-          N&apos;hésitez pas à nous contacter par Snapchat pour passer commande
-          chez nous
+          Commandez facilement via Snapchat en nous contactant directement pour
+          une expérience rapide et personnalisée.
         </FooterSubtitle>
+        <ArrowDown className="fa-regular fa-circle-down"></ArrowDown>
       </TextContainer>
       <ButtonContainer>
         <TheButton content={"Cliquez ici !"} />
       </ButtonContainer>
+      <Copyright />
     </FooterSection>
   );
 }

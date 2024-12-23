@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 72px;
   height: 72px;
-  box-shadow: 1px 1px 16px 3px #ffffffab;
   border-radius: 50px;
+  box-shadow: 1px 1px 16px 3px #ffffffab;
 `;
 const Img = styled.img`
   width: 100%;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { BrandTitle } from "../pages/Honeys";
+import PropTypes from "prop-types";
 
 const Container = styled.div`
   width: 310px;
@@ -9,12 +9,11 @@ const Container = styled.div`
 `;
 const Img = styled.img`
   position: relative;
-  left: 60px;
   bottom: 0px;
+  left: 60px;
   width: 250px;
   filter: blur(2px);
 `;
-
 const TextContainer = styled.div`
   position: relative;
   z-index: 1;
@@ -27,19 +26,19 @@ const TitleCard = styled.p`
   color: var(--primary-color);
 `;
 const SubtitleCard = styled.h3`
+  margin: 0;
   font-size: 28px;
   font-weight: 500;
-  margin: 0;
+`;
+const Text = styled.p`
+  margin: 10px 0 0 0;
+  font-size: 15px;
 `;
 
-const Text = styled.p`
-  font-size: 15px;
-  margin: 10px 0 0 0;
-`;
-function Card() {
+function Card({ source }) {
   return (
     <Container>
-      <Img src="/assets/POWER-BOX.png" />
+      <Img src={source} />
       <TextContainer>
         <TitleCard>T H E B O X</TitleCard>
         <SubtitleCard>Plus de quantité ?</SubtitleCard>
@@ -48,5 +47,9 @@ function Card() {
     </Container>
   );
 }
+
+Card.propTypes = {
+  source: PropTypes.string,
+};
 
 export default Card;
