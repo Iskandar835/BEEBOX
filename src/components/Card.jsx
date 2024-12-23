@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Container = styled.div`
+const Container = styled.article`
   width: 310px;
   height: 190px;
   background: var(--secondary-bg-color);

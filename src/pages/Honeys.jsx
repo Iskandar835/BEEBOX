@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Title, Subtitle } from "../components/pageStructure/Banner";
+import { Title } from "../components/pageStructure/Banner";
+import Subtitle from "../components/pageStructure/BothHoneys";
 import TheButton from "../components/Button";
 import HoneyEffect from "../components/Effect";
 import Card from "../components/Card";

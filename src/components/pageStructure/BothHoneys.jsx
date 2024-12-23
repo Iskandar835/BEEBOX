@@ -4,7 +4,11 @@ import HoneyButton from "../HoneyButton";
 const Section = styled.section`
   display: flex;
   justify-content: center;
-  margin: 150px 20px 0 20px;
+  padding: 150px 20px 0 20px;
+  border-radius: 80px 80px 0 0;
+  position: relative;
+  bottom: 50px;
+  background-color: var(--first-bg-color);
 `;
 const Container = styled.div`
   display: flex;
@@ -28,10 +32,15 @@ const Container = styled.div`
     filter: blur(3px);
   }
 `;
-
+export const Subtitle = styled.h2`
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+`;
 function BothHoneys() {
   return (
     <Section>
+      <Subtitle>Découvrez nos miels</Subtitle>
       <Container>
         <HoneyButton source={"/assets/POWER-STICK.png"} />
         <HoneyButton source={"/assets/LOVER-STICK.png"} />
