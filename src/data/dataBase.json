@@ -3,25 +3,27 @@
         {
             "id": 1,
             "name": "power",
+            "title": "effort physique",
             "ingredients": ["miel blanc du kirghiztan", "macabio du pérou", "ginseng sibérien", "gingembre", "tribulus terrestris", "gelée royale"],
             "stick": "../../assets/POWER-STICK.png",
-            "box": "POWER-BOX.png",
-            "effects": ["POWER-BATTERY.png", "POWER-BRAIN.png", "POWER-LIPS.png", "POWER-QUALITY.png"]
+            "box": "../../assets/POWER-BOX.png",
+            "effects": ["../../assets/POWER-BATTERY.png", "../../assets/POWER-BRAIN.png", "../../assets/POWER-QUALITY.png"]
         },
         {
             "id": 2,
             "name": "lover",
+            "title": "énergie sexuelle",
             "ingredients": ["miel rose de russie", "macabio du pérou", "ginseng sibérien", "gingembre", "tribulus terrestris", "gelée royale"],
             "stick": "../../assets/LOVER-STICK.png",
-            "box": "LOVER-BOX.png",
-            "effects": ["LOVER-BATTERY.png", "LOVER-BRAIN.png", "LOVER-LIPS.png", "LOVER-QUALITY.png"]
+            "box": "../../assets/LOVER-BOX.png",
+            "effects": ["../../assets/LOVER-BATTERY.png", "../../assets/LOVER-BRAIN.png", "../../assets/LOVER-LIPS.png"]
         }
     ],
     "contact": [
         {
             "id": 1,
             "snapchat": "blablabla",
-            "qrcode": "snapchat-qrcode.png"
+            "qrcode": "../../assets/snapchat-qrcode.png"
         }
     ]
 }

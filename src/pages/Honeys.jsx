@@ -8,6 +8,9 @@ import Ingredients from "../components/Ingredients";
 import Data from "../data/dataBase.json";
 import { useParams } from "react-router-dom";
 
+const getColorById = ({ id }) =>
+  id === "1" ? "var(--primary-color)" : "var(--secondary-color)";
+
 const Section = styled.section`
   padding: 100px 0 0 0;
   background: var(--secondary-bg-color);
@@ -23,14 +26,16 @@ const BrandTitle = styled.p`
   font-size: 17px;
 `;
 const HoneyTitle = styled(Title)`
-  color: var(--primary-color);
+  color: ${getColorById};
   text-shadow: 3px 3px 5px var(--first-bg-color);
+  text-transform: capitalize;
 `;
 const CaracteristicsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--first-bg-color);
+  border-top: 2px solid ${getColorById};
   border-radius: 180px 180px 0 0;
 `;
 const SubtitleContainer = styled.div`
@@ -44,7 +49,8 @@ const NewSubtitle = styled.h2`
   margin: 0;
   font-size: 30px;
   font-weight: 600;
-  color: var(--primary-color);
+  color: ${getColorById};
+  text-transform: capitalize;
 `;
 const EffectContainer = styled.div`
   display: flex;
@@ -82,27 +88,24 @@ function HoneysPage() {
     <Section>
       <TitleContainer>
         <BrandTitle>B E E B O X</BrandTitle>
-        <HoneyTitle>{honey.name}</HoneyTitle>
+        <HoneyTitle id={id}>{honey.name}</HoneyTitle>
       </TitleContainer>
-      <CaracteristicsContainer>
-        <HoneyStick source={"/assets/POWER-STICK.png"} />
+      <CaracteristicsContainer id={id}>
+        <HoneyStick source={honey.stick} />
         <SubtitleContainer>
-          <NewSubtitle>
-            Effort Physique<i className="fa-solid fa-bolt"></i>
+          <NewSubtitle id={id}>
+            {honey.title}
+            <i className="fa-solid fa-bolt"></i>
           </NewSubtitle>
         </SubtitleContainer>
         <EffectContainer>
-          <HoneyEffect source={"/assets/POWER-BRAIN.png"} />
-          <HoneyEffect source={"/assets/POWER-LIPS.png"} />
-          <HoneyEffect source={"/assets/POWER-QUALITY.png"} />
+          {honey.effects.map((effect, item) => (
+            <HoneyEffect key={item} source={effect} />
+          ))}
         </EffectContainer>
-        <Ingredients
-          content={
-            "miel blanc du Kirzighstan, macabio du pérou, ginseng sibérien, gingembre, tribulus terrestris, gelée royale"
-          }
-        />
+        <Ingredients content={honey.ingredients.join(", ")} />
         <BoxContainer>
-          <Card source={"/assets/POWER-BOX.png"} />
+          <Card source={honey.box} />
         </BoxContainer>
         <ContactSection>
           <ThirdTitle>
