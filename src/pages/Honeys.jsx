@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Title } from "../components/pageStructure/Banner";
-import Subtitle from "../components/pageStructure/BothHoneys";
 import TheButton from "../components/Button";
 import HoneyEffect from "../components/Effect";
 import Card from "../components/Card";
@@ -36,10 +35,11 @@ const SubtitleContainer = styled.div`
   position: relative;
   bottom: 50px;
 `;
-const NewSubtitle = styled(Subtitle)`
+const NewSubtitle = styled.h2`
   display: flex;
   gap: 10px;
   justify-content: center;
+  margin: 0;
   font-size: 30px;
   font-weight: 600;
   color: var(--primary-color);
