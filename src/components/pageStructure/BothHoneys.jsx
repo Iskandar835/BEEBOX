@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import HoneyButton from "../HoneyButton";
+import Data from "../../data/dataBase.json";
 
 const Section = styled.section`
   position: relative;
@@ -36,8 +37,14 @@ function BothHoneys() {
     <Section>
       <h2>Decouvrez nos miels</h2>
       <Container>
-        <HoneyButton source={"/assets/POWER-STICK.png"} />
-        <HoneyButton source={"/assets/LOVER-STICK.png"} />
+        {Data.honeys.map((honey) => (
+          <HoneyButton
+            key={honey.id}
+            href={`/honeys/${honey.id}`}
+            source={honey.stick}
+            // Rajouter plus tard "alt"
+          />
+        ))}
       </Container>
     </Section>
   );

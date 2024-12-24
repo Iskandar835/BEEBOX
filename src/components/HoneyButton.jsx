@@ -1,11 +1,11 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Button = styled.button`
+const Container = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  all: unset;
   width: 200px;
   height: 200px;
   border: 3px solid #ffffff;
@@ -18,21 +18,22 @@ const Button = styled.button`
     transform: scale(1.2);
   }
 `;
-const ButtonImg = styled.img`
+const Img = styled.img`
   width: 50%;
 `;
 
-function HoneyButton({ onclick, source }) {
+function HoneyButton({ href, source, alt }) {
   return (
-    <Button onClick={onclick}>
-      <ButtonImg src={source} />
-    </Button>
+    <Container to={href}>
+      <Img src={source} alt={alt} />
+    </Container>
   );
 }
 
 HoneyButton.propTypes = {
-  onclick: PropTypes.func,
+  href: PropTypes.string,
   source: PropTypes.string,
+  alt: PropTypes.string,
 };
 
 export default HoneyButton;

@@ -5,6 +5,8 @@ import HoneyEffect from "../components/Effect";
 import Card from "../components/Card";
 import HoneyStick from "../components/HoneyStick";
 import Ingredients from "../components/Ingredients";
+import Data from "../data/dataBase.json";
+import { useParams } from "react-router-dom";
 
 const Section = styled.section`
   padding: 100px 0 0 0;
@@ -72,11 +74,15 @@ export const ThirdTitle = styled.h3`
 `;
 
 function HoneysPage() {
+  const { id } = useParams();
+  const data = Data.honeys;
+  const honey = data.find((honey) => honey.id === parseInt(id));
+
   return (
     <Section>
       <TitleContainer>
         <BrandTitle>B E E B O X</BrandTitle>
-        <HoneyTitle>Power</HoneyTitle>
+        <HoneyTitle>{honey.name}</HoneyTitle>
       </TitleContainer>
       <CaracteristicsContainer>
         <HoneyStick source={"/assets/POWER-STICK.png"} />
