@@ -8,6 +8,7 @@ import Ingredients from "../components/Ingredients";
 import Data from "../data/dataBase.json";
 import { useParams } from "react-router-dom";
 
+//** This variable is used to change the color depending on the selected honey **
 const getColorById = ({ id }) =>
   id === "1" ? "var(--primary-color)" : "var(--secondary-color)";
 
@@ -35,7 +36,7 @@ const CaracteristicsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: var(--first-bg-color);
-  border-top: 2px solid ${getColorById};
+  border-top: 5px solid ${getColorById};
   border-radius: 180px 180px 0 0;
 `;
 const SubtitleContainer = styled.div`
@@ -44,8 +45,9 @@ const SubtitleContainer = styled.div`
 `;
 const NewSubtitle = styled.h2`
   display: flex;
-  gap: 10px;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
   margin: 0;
   font-size: 30px;
   font-weight: 600;
@@ -95,7 +97,11 @@ function HoneysPage() {
         <SubtitleContainer>
           <NewSubtitle id={id}>
             {honey.title}
-            <i className="fa-solid fa-bolt"></i>
+            <i
+              className={
+                id === "1" ? "fa-solid fa-bolt" : "fa-solid fa-heart-pulse"
+              }
+            ></i>
           </NewSubtitle>
         </SubtitleContainer>
         <EffectContainer>
@@ -105,13 +111,13 @@ function HoneysPage() {
         </EffectContainer>
         <Ingredients content={honey.ingredients.join(", ")} />
         <BoxContainer>
-          <Card source={honey.box} />
+          <Card source={honey.box} id={id} />
         </BoxContainer>
         <ContactSection>
           <ThirdTitle>
             Vous souhaitez en savoir plus sur nos produits ?
           </ThirdTitle>
-          <TheButton content={"Cliquez ici !"} />
+          <TheButton id={id} content={"Cliquez ici !"} />
         </ContactSection>
       </CaracteristicsContainer>
     </Section>

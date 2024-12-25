@@ -23,10 +23,11 @@ const TextContainer = styled.div`
 `;
 const TitleCard = styled.p`
   margin-bottom: 50px;
-  color: var(--primary-color);
+  color: ${({ id }) =>
+    id === "1" ? "var(--primary-color)" : "var(--secondary-color)"};
 `;
 const SubtitleCard = styled.h3`
-  margin: 0;
+  margin: 50px 0 0 0;
   font-size: 28px;
   font-weight: 500;
 `;
@@ -35,12 +36,12 @@ const Text = styled.p`
   font-size: 15px;
 `;
 
-function Card({ source }) {
+function Card({ source, id }) {
   return (
     <Container>
       <Img src={source} />
       <TextContainer>
-        <TitleCard>T H E B O X</TitleCard>
+        <TitleCard id={id}>T H E B O X</TitleCard>
         <SubtitleCard>Plus de quantité ?</SubtitleCard>
         <Text>Découvrez nos box x28 sticks !</Text>
       </TextContainer>
@@ -50,6 +51,7 @@ function Card({ source }) {
 
 Card.propTypes = {
   source: PropTypes.string,
+  id: PropTypes.string,
 };
 
 export default Card;

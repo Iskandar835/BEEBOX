@@ -7,7 +7,12 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 18px;
   color: var(--secondary-bg-color);
-  background: var(--primary-color);
+  background: ${({ id }) =>
+    id === "1"
+      ? "var(--primary-color)"
+      : id === "2"
+      ? "var(--secondary-color)"
+      : "#FFFFFF"};
   border: none;
   border-radius: 8px;
   box-shadow: 0 15px 60px -5px rgba(0, 0, 0, 0.9);
@@ -19,15 +24,18 @@ const Button = styled.button`
   }
 `;
 
-function TheButton({ onClick, content }) {
+function TheButton({ id, onClick, content }) {
   return (
     <>
-      <Button onClick={onClick}>{content}</Button>
+      <Button id={id} onClick={onClick}>
+        {content}
+      </Button>
     </>
   );
 }
 
 TheButton.propTypes = {
+  id: PropTypes.string,
   onClick: PropTypes.func,
   content: PropTypes.string,
 };
