@@ -5,8 +5,8 @@ import HoneyEffect from "../components/Effect";
 import Card from "../components/Card";
 import HoneyStick from "../components/HoneyStick";
 import Ingredients from "../components/Ingredients";
-import Data from "../data/dataBase.json";
 import { useParams } from "react-router-dom";
+import Data from "../data/dataBase.json";
 
 //** This variable is used to change the color depending on the selected honey **
 const getColorById = ({ id }) =>
@@ -26,7 +26,7 @@ const BrandTitle = styled.p`
   margin: 0;
   font-size: 17px;
 `;
-const HoneyTitle = styled(Title)`
+const Name = styled(Title)`
   color: ${getColorById};
   text-shadow: 3px 3px 5px var(--first-bg-color);
   text-transform: capitalize;
@@ -43,7 +43,7 @@ const SubtitleContainer = styled.div`
   position: relative;
   bottom: 50px;
 `;
-const NewSubtitle = styled.h2`
+const Subtitle = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,25 +84,25 @@ export const ThirdTitle = styled.h3`
 function HoneysPage() {
   const { id } = useParams();
   const data = Data.honeys;
-  const honey = data.find((honey) => honey.id === parseInt(id));
+  const honey = data.find((honey) => honey.id === id);
 
   return (
     <Section>
       <TitleContainer>
         <BrandTitle>B E E B O X</BrandTitle>
-        <HoneyTitle id={id}>{honey.name}</HoneyTitle>
+        <Name id={id}>{honey.name}</Name>
       </TitleContainer>
       <CaracteristicsContainer id={id}>
         <HoneyStick source={honey.stick} />
         <SubtitleContainer>
-          <NewSubtitle id={id}>
+          <Subtitle id={id}>
             {honey.title}
             <i
               className={
                 id === "1" ? "fa-solid fa-bolt" : "fa-solid fa-heart-pulse"
               }
             ></i>
-          </NewSubtitle>
+          </Subtitle>
         </SubtitleContainer>
         <EffectContainer>
           {honey.effects.map((effect, item) => (
