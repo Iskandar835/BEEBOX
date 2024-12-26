@@ -6,7 +6,7 @@ const Button = styled.button`
   padding: 13px 25px;
   font-weight: 600;
   font-size: 18px;
-  color: var(--secondary-bg-color);
+  color: var(--tertiary-bg-color);
   background: ${({ id }) =>
     id === "1"
       ? "var(--primary-color)"

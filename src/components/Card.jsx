@@ -27,7 +27,7 @@ const TitleCard = styled.p`
     id === "1" ? "var(--primary-color)" : "var(--secondary-color)"};
 `;
 const SubtitleCard = styled.h3`
-  margin: 50px 0 0 0;
+  margin: 0;
   font-size: 28px;
   font-weight: 500;
 `;

@@ -7,7 +7,7 @@ const FooterSection = styled.footer`
   margin: 150px 0 0 0;
   padding: 80px 30px 10px 30px;
   text-align: center;
-  background: var(--secondary-bg-color);
+  background: var(--tertiary-bg-color);
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ function Footer() {
         <ArrowDown className="fa-regular fa-circle-down"></ArrowDown>
       </TextContainer>
       <ButtonContainer>
-        <TheButton content={"Cliquez ici !"} />
+        <TheButton id={"contact"} content={"Nous contacter"} />
       </ButtonContainer>
       <Copyright />
     </FooterSection>

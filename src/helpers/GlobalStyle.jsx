@@ -2,12 +2,17 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle` 
+    html {
+        scroll-behavior: smooth;
+    }
+
     :root {
         --primary-color: #FFAC00;
         --secondary-color: #DA3E8E;
 
         --first-bg-color: #1E1E1E;
         --secondary-bg-color: #3A3A3A;
+        --tertiary-bg-color: #000000;
         
         --first-font-color: #FFFFFF;
         --title-font-family: "Poppins", sans serif;
