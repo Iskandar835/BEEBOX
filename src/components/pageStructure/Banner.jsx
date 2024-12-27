@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import DoodleItems from "/assets/Doodleitems.png";
 
 const Container = styled.section`
   position: relative;
@@ -11,7 +12,7 @@ const Container = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("./assets/Doodleitems.png");
+    background: url(${DoodleItems});
   }
 `;
 const TextContainer = styled.div`
