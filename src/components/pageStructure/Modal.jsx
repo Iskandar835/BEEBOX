@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -6,30 +7,29 @@ const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  transition: visibility 500ms;
 `;
 const ModalOverlay = styled.div`
-  opacity: 0;
   position: relative;
   z-index: 15;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(15px);
   --webkit-backdrop-filter: blur(15px);
-  transition: opacity 500ms 200ms ease-in;
+  transition: display 500ms 200ms ease-in;
 `;
 const Modal = styled.div`
-  opacity: 0;
   position: absolute;
   z-index: 20;
   width: 290px;
   height: 380px;
   background-color: var(--secondary-bg-color);
-  border: 3px solid #FFFFFF;
+  border: 3px solid #ffffff;
   border-radius: 20px;
-  transition opacity 400ms ease-out;
+  transition: display 400ms ease-out;
 `;
 const ModalContent = styled.div`
   display: flex;
@@ -58,25 +58,33 @@ const Img = styled.img`
   width: 68%;
 `;
 
-function TheModal() {
+function TheModal({ firstCloser, secondCloser }) {
   return (
     <ModalContainer>
-      <ModalOverlay></ModalOverlay>
+      <ModalOverlay onClick={firstCloser}></ModalOverlay>
       <Modal>
         <ModalContent>
-          <Icon className="fa-solid fa-arrow-right-from-bracket"></Icon>
+          <Icon
+            onClick={secondCloser}
+            className="fa-solid fa-arrow-right-from-bracket"
+          ></Icon>
           <TitleAndImg>
             <Title>
               Nos commandes se passent sur Snapchat : ajoutez-nous, et on
               s&apos;occupe de tout !
             </Title>
             <Border></Border>
-            <Img src="./assets/snapchat-qrcode.png" alt="" />
+            <Img src="../assets/snapchat-qrcode.png" />
           </TitleAndImg>
         </ModalContent>
       </Modal>
     </ModalContainer>
   );
 }
+
+TheModal.propTypes = {
+  firstCloser: PropTypes.func,
+  secondCloser: PropTypes.func,
+};
 
 export default TheModal;

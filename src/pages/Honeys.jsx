@@ -7,6 +7,8 @@ import HoneyStick from "../components/HoneyStick";
 import Ingredients from "../components/Ingredients";
 import { useParams } from "react-router-dom";
 import Data from "../data/dataBase.json";
+import { useState } from "react";
+import TheModal from "../components/pageStructure/Modal";
 
 //** This variable is used to change the color depending on the selected honey **
 const getColorById = ({ id }) =>
@@ -86,8 +88,17 @@ function HoneysPage() {
   const data = Data.honeys;
   const honey = data.find((honey) => honey.id === id);
 
+  const [modal, setModal] = useState(false);
+  const OpenModal = () => {
+    setModal(true);
+  };
+  const CloseModal = () => {
+    setModal(false);
+  };
+
   return (
     <Section>
+      {modal && <TheModal firstCloser={CloseModal} secondCloser={CloseModal} />}
       <TitleContainer>
         <BrandTitle>B E E B O X</BrandTitle>
         <Name id={id}>{honey.name}</Name>
@@ -117,7 +128,7 @@ function HoneysPage() {
           <ThirdTitle>
             Vous souhaitez en savoir plus sur nos produits ?
           </ThirdTitle>
-          <TheButton id={id} content={"Cliquez ici !"} />
+          <TheButton id={id} onClick={OpenModal} content={"Cliquez ici !"} />
         </ContactSection>
       </CaracteristicsContainer>
     </Section>
