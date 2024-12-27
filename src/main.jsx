@@ -7,12 +7,14 @@ import Header from "./components/pageStructure/Header.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import HoneysPage from "./pages/Honeys.jsx";
 import Footer from "./components/pageStructure/Footer.jsx";
+import TheModal from "./components/pageStructure/Modal.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
       <GlobalStyle />
       <BeOnTop />
+      <TheModal />
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
