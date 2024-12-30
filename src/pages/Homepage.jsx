@@ -1,5 +1,5 @@
-import Banner from "../components/pageStructure/Banner";
-import BothHoneys from "../components/pageStructure/BothHoneys";
+import Banner from "../components/Banner";
+import BothHoneys from "../components/BothHoneys";
 
 function Homepage() {
   return (

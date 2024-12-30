@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import DoodleItems from "/assets/Doodleitems.png";
+import { TitleH1 } from "../utils/Titles";
 
 const Container = styled.section`
   position: relative;
@@ -23,19 +24,12 @@ const TextContainer = styled.div`
   border-radius: 0 35px 0 35px;
   box-shadow: 5px 5px 5px #000000;
 `;
-export const Title = styled.h1`
-  margin: 0;
-  font-family: var(--title-font-family);
-  font-size: 36px;
-  font-weight: 600;
-  text-shadow: 5px 5px 5px #000000;
-`;
 
 function Banner() {
   return (
     <Container>
       <TextContainer>
-        <Title>Bienvenue</Title>
+        <TitleH1>Bienvenue</TitleH1>
       </TextContainer>
     </Container>
   );

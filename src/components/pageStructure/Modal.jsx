@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TitleH4 } from "../../utils/Titles";
 import PropTypes from "prop-types";
 
 const ModalContainer = styled.div`
@@ -44,9 +45,6 @@ const TitleAndImg = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-const Title = styled.p`
-  font-size: 17px;
   text-align: center;
 `;
 const Border = styled.div`
@@ -69,10 +67,10 @@ function TheModal({ closeModal }) {
             className="fa-solid fa-arrow-right-from-bracket"
           ></Icon>
           <TitleAndImg>
-            <Title>
+            <TitleH4>
               Nos commandes se passent sur Snapchat : ajoutez-nous, et on
               s&apos;occupe de tout !
-            </Title>
+            </TitleH4>
             <Border></Border>
             <Img src="../assets/snapchat-qrcode.png" alt="Snapchat qr-code" />
           </TitleAndImg>

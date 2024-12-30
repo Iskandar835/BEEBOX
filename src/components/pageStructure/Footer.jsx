@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { ThirdTitle } from "../../pages/Honeys";
-import Copyright from "../Copyright";
+import { TitleH3 } from "../../utils/Titles";
 import ModalButton from "../ModalButton";
+import Copyright from "../Copyright";
 
 const FooterSection = styled.footer`
   margin: 150px 0 0 0;
@@ -13,10 +13,6 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-`;
-const FooterSubtitle = styled.p`
-  font-size: 15px;
-  font-weight: 300;
 `;
 const ArrowDown = styled.i`
   margin-top: 10px;
@@ -33,14 +29,14 @@ function Footer() {
   return (
     <FooterSection>
       <TextContainer>
-        <ThirdTitle>
+        <TitleH3>
           Découvrez nos miels, 100 % naturels et pleins de saveurs, directement
           issus de nos ruches.
-        </ThirdTitle>
-        <FooterSubtitle>
+        </TitleH3>
+        <p>
           Commandez facilement via Snapchat en nous contactant directement pour
           une expérience rapide et personnalisée.
-        </FooterSubtitle>
+        </p>
         <ArrowDown className="fa-regular fa-circle-down"></ArrowDown>
       </TextContainer>
       <ButtonContainer>

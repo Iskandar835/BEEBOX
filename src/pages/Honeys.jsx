@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title } from "../components/pageStructure/Banner";
+import { TitleH1, TitleH2, TitleH3 } from "../utils/Titles";
 import { useParams } from "react-router-dom";
 import Data from "../data/dataBase.json";
 import HoneyStick from "../components/HoneyStick";
@@ -26,7 +26,7 @@ const BrandTitle = styled.p`
   margin: 0;
   font-size: 17px;
 `;
-const Name = styled(Title)`
+const Name = styled(TitleH1)`
   color: ${getColorById};
   text-shadow: 3px 3px 5px var(--first-bg-color);
   text-transform: capitalize;
@@ -42,17 +42,17 @@ const CaracteristicsContainer = styled.div`
 const SubtitleContainer = styled.div`
   position: relative;
   bottom: 50px;
-`;
-const Subtitle = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 0;
-  font-size: 30px;
-  font-weight: 600;
   color: ${getColorById};
+`;
+const Subtitle = styled(TitleH2)`
   text-transform: capitalize;
+`;
+const Icon = styled.i`
+  font-size: 30px;
 `;
 const EffectContainer = styled.div`
   display: flex;
@@ -74,12 +74,6 @@ const ContactSection = styled.div`
   padding: 0 35px;
   text-align: center;
 `;
-export const ThirdTitle = styled.h3`
-  margin: 0;
-  font-family: var(--title-font-family);
-  font-size: 17px;
-  font-weight: 500;
-`;
 
 function HoneysPage() {
   const { id } = useParams();
@@ -94,15 +88,13 @@ function HoneysPage() {
       </TitleContainer>
       <CaracteristicsContainer id={id}>
         <HoneyStick source={honey.stick} />
-        <SubtitleContainer>
-          <Subtitle id={id}>
-            {honey.title}
-            <i
-              className={
-                id === "1" ? "fa-solid fa-bolt" : "fa-solid fa-heart-pulse"
-              }
-            ></i>
-          </Subtitle>
+        <SubtitleContainer id={id}>
+          <Subtitle>{honey.title}</Subtitle>
+          <Icon
+            className={
+              id === "1" ? "fa-solid fa-bolt" : "fa-solid fa-heart-pulse"
+            }
+          ></Icon>
         </SubtitleContainer>
         <EffectContainer>
           {honey.effects.map((effect, item) => (
@@ -114,9 +106,7 @@ function HoneysPage() {
           <Card source={honey.box} id={id} />
         </BoxContainer>
         <ContactSection>
-          <ThirdTitle>
-            Vous souhaitez en savoir plus sur nos produits ?
-          </ThirdTitle>
+          <TitleH3>Vous souhaitez en savoir plus sur nos produits ?</TitleH3>
           <ModalButton id={id} content={"Cliquez ici !"} />
         </ContactSection>
       </CaracteristicsContainer>

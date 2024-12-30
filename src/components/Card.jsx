@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TitleH3 } from "../utils/Titles";
 import PropTypes from "prop-types";
 
 const Container = styled.article`
@@ -21,12 +22,13 @@ const TextContainer = styled.div`
   padding: 0 20px;
   text-shadow: 3px 3px 5px var(--first-bg-color);
 `;
-const TitleCard = styled.p`
-  margin-bottom: 50px;
+const TitleCard = styled(TitleH3)`
+  margin: 15px 0 50px 0;
+  font-size: 17px;
   color: ${({ id }) =>
     id === "1" ? "var(--primary-color)" : "var(--secondary-color)"};
 `;
-const SubtitleCard = styled.h3`
+const SubtitleCard = styled.p`
   margin: 0;
   font-size: 28px;
   font-weight: 500;

@@ -1,4 +1,4 @@
-// All this synthaxe is for an use-friendly style
+//** All this component is for an use-friendly style **
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle` 

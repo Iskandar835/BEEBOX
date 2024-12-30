@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GlobalStyle from "./helpers/GlobalStyle.jsx";
-import BeOnTop from "./helpers/BeOnTop.jsx";
+import GlobalStyle from "./utils/GlobalStyle.jsx";
+import BeOnTop from "./utils/BeOnTop.jsx";
 import Header from "./components/pageStructure/Header.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import HoneysPage from "./pages/Honeys.jsx";

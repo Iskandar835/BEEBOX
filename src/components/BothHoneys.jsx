@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import HoneyButton from "../HoneyButton";
-import Data from "../../data/dataBase.json";
+import Data from "../data/dataBase.json";
+import HoneyButton from "./HoneyButton";
 
 const Section = styled.section`
   position: relative;
