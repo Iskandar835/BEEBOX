@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { Title } from "../components/pageStructure/Banner";
-import TheButton from "../components/Button";
-import HoneyEffect from "../components/Effect";
-import Card from "../components/Card";
-import HoneyStick from "../components/HoneyStick";
-import Ingredients from "../components/Ingredients";
 import { useParams } from "react-router-dom";
 import Data from "../data/dataBase.json";
-import { useState } from "react";
-import TheModal from "../components/pageStructure/Modal";
+import HoneyStick from "../components/HoneyStick";
+import HoneyEffect from "../components/Effect";
+import Ingredients from "../components/Ingredients";
+import Card from "../components/Card";
+import ModalButton from "../components/ModalButton";
 
 //** This variable is used to change the color depending on the selected honey **
 const getColorById = ({ id }) =>
@@ -88,17 +86,8 @@ function HoneysPage() {
   const data = Data.honeys;
   const honey = data.find((honey) => honey.id === id);
 
-  const [modal, setModal] = useState(false);
-  const OpenModal = () => {
-    setModal(true);
-  };
-  const CloseModal = () => {
-    setModal(false);
-  };
-
   return (
     <Section>
-      {modal && <TheModal firstCloser={CloseModal} secondCloser={CloseModal} />}
       <TitleContainer>
         <BrandTitle>B E E B O X</BrandTitle>
         <Name id={id}>{honey.name}</Name>
@@ -128,7 +117,7 @@ function HoneysPage() {
           <ThirdTitle>
             Vous souhaitez en savoir plus sur nos produits ?
           </ThirdTitle>
-          <TheButton id={id} onClick={OpenModal} content={"Cliquez ici !"} />
+          <ModalButton id={id} content={"Cliquez ici !"} />
         </ContactSection>
       </CaracteristicsContainer>
     </Section>

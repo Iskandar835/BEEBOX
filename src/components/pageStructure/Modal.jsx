@@ -58,14 +58,14 @@ const Img = styled.img`
   width: 68%;
 `;
 
-function TheModal({ firstCloser, secondCloser }) {
+function TheModal({ closeModal }) {
   return (
     <ModalContainer>
-      <ModalOverlay onClick={firstCloser}></ModalOverlay>
+      <ModalOverlay onClick={closeModal}></ModalOverlay>
       <Modal>
         <ModalContent>
           <Icon
-            onClick={secondCloser}
+            onClick={closeModal}
             className="fa-solid fa-arrow-right-from-bracket"
           ></Icon>
           <TitleAndImg>
@@ -74,7 +74,7 @@ function TheModal({ firstCloser, secondCloser }) {
               s&apos;occupe de tout !
             </Title>
             <Border></Border>
-            <Img src="../assets/snapchat-qrcode.png" />
+            <Img src="../assets/snapchat-qrcode.png" alt="Snapchat qr-code" />
           </TitleAndImg>
         </ModalContent>
       </Modal>
@@ -83,8 +83,7 @@ function TheModal({ firstCloser, secondCloser }) {
 }
 
 TheModal.propTypes = {
-  firstCloser: PropTypes.func,
-  secondCloser: PropTypes.func,
+  closeModal: PropTypes.func,
 };
 
 export default TheModal;

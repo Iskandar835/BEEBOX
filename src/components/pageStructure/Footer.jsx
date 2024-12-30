@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import TheButton from "../Button";
 import { ThirdTitle } from "../../pages/Honeys";
 import Copyright from "../Copyright";
+import ModalButton from "../ModalButton";
 
 const FooterSection = styled.footer`
   margin: 150px 0 0 0;
@@ -44,7 +44,7 @@ function Footer() {
         <ArrowDown className="fa-regular fa-circle-down"></ArrowDown>
       </TextContainer>
       <ButtonContainer>
-        <TheButton id={"contact"} content={"Nous contacter"} />
+        <ModalButton id={"contact"} content={"Nous contacter"} />
       </ButtonContainer>
       <Copyright />
     </FooterSection>

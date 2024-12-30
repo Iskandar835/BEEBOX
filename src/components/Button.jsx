@@ -24,10 +24,10 @@ const Button = styled.button`
   }
 `;
 
-function TheButton({ id, onClick, content }) {
+function TheButton({ onclick, id, content }) {
   return (
     <>
-      <Button id={id} onClick={onClick}>
+      <Button onClick={onclick} id={id}>
         {content}
       </Button>
     </>
@@ -35,8 +35,8 @@ function TheButton({ id, onClick, content }) {
 }
 
 TheButton.propTypes = {
+  onclick: PropTypes.func,
   id: PropTypes.string,
-  onClick: PropTypes.func,
   content: PropTypes.string,
 };
 
