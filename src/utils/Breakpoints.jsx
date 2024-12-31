@@ -1,4 +1,4 @@
-// All this synthaxe is for an use-friendly media queries
+// All this component is for an use-friendly media queries
 
 const breakpoints = {
   xs: "320px",
