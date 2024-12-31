@@ -87,7 +87,7 @@ function HoneysPage() {
         <Name id={id}>{honey.name}</Name>
       </TitleContainer>
       <CaracteristicsContainer id={id}>
-        <HoneyStick source={honey.stick} />
+        <HoneyStick source={honey.stick} alt={honey.stickAlt} />
         <SubtitleContainer id={id}>
           <Subtitle>{honey.title}</Subtitle>
           <Icon
@@ -97,13 +97,17 @@ function HoneysPage() {
           ></Icon>
         </SubtitleContainer>
         <EffectContainer>
-          {honey.effects.map((effect, item) => (
-            <HoneyEffect key={item} source={effect} />
+          {honey.effects.images.map((image, index) => (
+            <HoneyEffect
+              key={index}
+              source={image}
+              alt={honey.effects.alt[index]}
+            />
           ))}
         </EffectContainer>
         <Ingredients content={honey.ingredients.join(", ")} />
         <BoxContainer>
-          <Card source={honey.box} id={id} />
+          <Card source={honey.box} alt={honey.boxAlt} id={id} />
         </BoxContainer>
         <ContactSection>
           <TitleH3>Vous souhaitez en savoir plus sur nos produits ?</TitleH3>

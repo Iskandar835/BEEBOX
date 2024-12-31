@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { TitleH4 } from "../../utils/Titles";
+import Data from "../../data/dataBase.json";
 import PropTypes from "prop-types";
 
 const ModalContainer = styled.div`
@@ -57,6 +58,8 @@ const Img = styled.img`
 `;
 
 function TheModal({ closeModal }) {
+  const snapchat = Data.contact;
+
   return (
     <ModalContainer>
       <ModalOverlay onClick={closeModal}></ModalOverlay>
@@ -72,7 +75,7 @@ function TheModal({ closeModal }) {
               s&apos;occupe de tout !
             </TitleH4>
             <Border></Border>
-            <Img src="../assets/snapchat-qrcode.png" alt="Snapchat qr-code" />
+            <Img src={snapchat[0].qrcode} alt={snapchat[0].alt} />
           </TitleAndImg>
         </ModalContent>
       </Modal>

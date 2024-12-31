@@ -42,7 +42,7 @@ function BothHoneys() {
             key={honey.id}
             href={`/honeys/${honey.id}`}
             source={honey.stick}
-            // Rajouter plus tard "alt"
+            alt={honey.stickAlt}
           />
         ))}
       </Container>

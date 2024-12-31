@@ -38,10 +38,10 @@ const Text = styled.p`
   font-size: 15px;
 `;
 
-function Card({ source, id }) {
+function Card({ source, alt, id }) {
   return (
     <Container>
-      <Img src={source} />
+      <Img src={source} alt={alt} />
       <TextContainer>
         <TitleCard id={id}>T H E B O X</TitleCard>
         <SubtitleCard>Plus de quantité ?</SubtitleCard>
@@ -53,6 +53,7 @@ function Card({ source, id }) {
 
 Card.propTypes = {
   source: PropTypes.string,
+  alt: PropTypes.string,
   id: PropTypes.string,
 };
 
