@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../utils/Breakpoints";
 import PropTypes from "prop-types";
 
 const Button = styled.button`
@@ -21,6 +22,10 @@ const Button = styled.button`
     transform: scale(0.95);
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.9);
     cursor: pointer;
+  }
+  @media ${devices.tabs} {
+    padding: 15px 28px;
+    font-size: 20px;
   }
 `;
 

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { devices } from "../utils/Breakpoints";
+import { TitleH2 } from "../utils/Titles";
 import Data from "../data/dataBase.json";
 import HoneyButton from "./HoneyButton";
 
@@ -9,10 +11,19 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   padding: 40px 20px 0 20px;
-  gap: 65px;
+  gap: 75px;
   border-radius: 80px 80px 0 0;
   text-align: center;
   background-color: var(--first-bg-color);
+  @media ${devices.tabs} {
+    padding: 80px 20px 0 20px;
+  }
+`;
+const Title = styled(TitleH2)`
+  font-size: 20px;
+  @media ${devices.tabs} {
+    font-size: 25px;
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -35,7 +46,7 @@ const Container = styled.div`
 function BothHoneys() {
   return (
     <Section>
-      <h2>Decouvrez nos miels</h2>
+      <Title>Decouvrez nos miels</Title>
       <Container>
         {Data.honeys.map((honey) => (
           <HoneyButton

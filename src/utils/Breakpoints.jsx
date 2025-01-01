@@ -7,7 +7,7 @@ const breakpoints = {
 };
 
 export const devices = {
-  tabs: `(width = ${breakpoints.md}) and (width = ${breakpoints.lg})`,
+  tabs: `(min-width:${breakpoints.md}) and (max-width:${breakpoints.lg})`,
   tabsAndMobile: `(width = ${breakpoints.xs}) and (width = ${breakpoints.lg})`,
-  onlyComputeur: `(width >= ${breakpoints.lg})`,
+  onlyComputeur: `(width > ${breakpoints.lg})`,
 };

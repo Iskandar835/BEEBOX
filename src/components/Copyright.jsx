@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../utils/Breakpoints";
 
 const Container = styled.div`
   display: flex;
@@ -10,6 +11,9 @@ const Container = styled.div`
 const Text = styled.p`
   font-size: 10px;
   font-family: var(--title-font-family);
+  @media ${devices.tabs} {
+    font-size: 13px;
+  }
 `;
 
 function Copyright() {

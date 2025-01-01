@@ -6,7 +6,6 @@ const Image = styled.img`
   bottom: 90px;
   width: 150px;
 `;
-// rajouter plus tards keyframes Heartpulse
 
 function HoneyStick({ source, alt }) {
   return (

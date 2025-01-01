@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { devices } from "../utils/Breakpoints";
 import PropTypes from "prop-types";
 
 const Container = styled(Link)`
@@ -16,6 +17,10 @@ const Container = styled(Link)`
     position: relative;
     z-index: 1;
     transform: scale(1.2);
+  }
+  @media ${devices.tabs} {
+    width: 240px;
+    height: 240px;
   }
 `;
 const Img = styled.img`

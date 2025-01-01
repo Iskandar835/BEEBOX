@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import DoodleItems from "/assets/Doodleitems.png";
+import { devices } from "../utils/Breakpoints";
 import { TitleH1 } from "../utils/Titles";
 
 const Container = styled.section`
@@ -15,6 +16,9 @@ const Container = styled.section`
     height: 100%;
     background: url(${DoodleItems});
   }
+  @media ${devices.tabs} {
+    padding: 140px 0 180px 0;
+  }
 `;
 const TextContainer = styled.div`
   position: relative;
@@ -23,13 +27,22 @@ const TextContainer = styled.div`
   background-color: var(--first-bg-color);
   border-radius: 0 35px 0 35px;
   box-shadow: 5px 5px 5px #000000;
+  @media ${devices.tabs} {
+    padding: 10px 25px;
+    border-radius: 0 40px 0 40px;
+  }
+`;
+const Title = styled(TitleH1)`
+  @media ${devices.tabs} {
+    font-size: 40px;
+  }
 `;
 
 function Banner() {
   return (
     <Container>
       <TextContainer>
-        <TitleH1>Bienvenue</TitleH1>
+        <Title>Bienvenue</Title>
       </TextContainer>
     </Container>
   );
