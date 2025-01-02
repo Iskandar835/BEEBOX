@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../utils/Breakpoints";
 import PropTypes from "prop-types";
 
 const Container = styled.div`
@@ -9,13 +10,21 @@ const Container = styled.div`
 const Title = styled.p`
   margin: 0;
   font-size: 17px;
+  @media ${devices.tabs} {
+    font-size: 20px;
+  }
+`;
+const Text = styled.p`
+  @media ${devices.tabs} {
+    font-size: 18px;
+  }
 `;
 
 function Ingredients({ content }) {
   return (
     <Container>
       <Title>Ingrédients :</Title>
-      <p>{content}</p>
+      <Text>{content}</Text>
     </Container>
   );
 }

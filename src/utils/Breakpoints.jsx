@@ -3,11 +3,13 @@
 const breakpoints = {
   xs: "320px",
   md: "767px",
+  te: "768px",
   lg: "1024px",
 };
 
 export const devices = {
   tabs: `(min-width:${breakpoints.md}) and (max-width:${breakpoints.lg})`,
   tabsAndMobile: `(width = ${breakpoints.xs}) and (width = ${breakpoints.lg})`,
+  tabsAndComputer: `(min-width:${breakpoints.te})`,
   onlyComputeur: `(width > ${breakpoints.lg})`,
 };

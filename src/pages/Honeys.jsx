@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../utils/Breakpoints";
 import { TitleH1, TitleH2, TitleH3 } from "../utils/Titles";
 import { useParams } from "react-router-dom";
 import Data from "../data/dataBase.json";
@@ -21,15 +22,24 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 0 120px 0;
+  @media ${devices.tabs} {
+    margin: 0 0 150px 0;
+  }
 `;
 const BrandTitle = styled.p`
   margin: 0;
   font-size: 17px;
+  @media ${devices.tabs} {
+    font-size: 20px;
+  }
 `;
 const Name = styled(TitleH1)`
   color: ${getColorById};
   text-shadow: 3px 3px 5px var(--first-bg-color);
   text-transform: capitalize;
+  @media ${devices.tabs} {
+    font-size: 40px;
+  }
 `;
 const CaracteristicsContainer = styled.div`
   display: flex;
@@ -50,6 +60,9 @@ const SubtitleContainer = styled.div`
 `;
 const Subtitle = styled(TitleH2)`
   text-transform: capitalize;
+  @media ${devices.tabs} {
+    font-size: 33px;
+  }
 `;
 const Icon = styled.i`
   font-size: 30px;
@@ -73,6 +86,10 @@ const ContactSection = styled.div`
   margin: 120px 0 0 0;
   padding: 0 35px;
   text-align: center;
+  @media ${devices.tabs} {
+    margin: 150px 0 0 0;
+    gap: 60px;
+  }
 `;
 
 function HoneysPage() {
