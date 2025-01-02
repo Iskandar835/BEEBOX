@@ -22,6 +22,16 @@ const Container = styled(Link)`
     width: 240px;
     height: 240px;
   }
+  @media ${devices.desktop} {
+    width: 280px;
+    height: 280px;
+    &:hover {
+      position: relative;
+      z-index: 1;
+      transform: scale(1.2);
+      box-shadow: 0px 10px 50px #1e1e1e;
+    }
+  }
 `;
 const Img = styled.img`
   width: 50%;

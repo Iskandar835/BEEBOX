@@ -19,6 +19,9 @@ const Container = styled.section`
   @media ${devices.tabs} {
     padding: 140px 0 180px 0;
   }
+  @media ${devices.desktop} {
+    padding: 200px 0 240px 0;
+  }
 `;
 const TextContainer = styled.div`
   position: relative;
@@ -31,10 +34,17 @@ const TextContainer = styled.div`
     padding: 10px 25px;
     border-radius: 0 40px 0 40px;
   }
+  @media ${devices.desktop} {
+    padding: 15px 30px;
+    border-radius: 0 45px 0 45px;
+  }
 `;
 const Title = styled(TitleH1)`
   @media ${devices.tabs} {
     font-size: 40px;
+  }
+  @media ${devices.desktop} {
+    font-size: 45px;
   }
 `;
 

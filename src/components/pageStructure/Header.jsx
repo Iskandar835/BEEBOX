@@ -12,6 +12,14 @@ const Container = styled.header`
   padding: 15px 20px;
   background: var(--first-bg-color);
   box-shadow: 0 5px 10px var(--tertiary-bg-color);
+  @media ${devices.desktop} {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    padding: 20px 50px;
+    box-sizing: border-box;
+  }
 `;
 const HeaderLogo = styled(Link)`
   margin: 0;
@@ -21,6 +29,9 @@ const HeaderLogo = styled(Link)`
   @media ${devices.tabs} {
     font-size: 29px;
   }
+  @media ${devices.desktop} {
+    font-size: 33px;
+  }
 `;
 const HeaderLink = styled.a`
   color: var(--firt-font-color);
@@ -28,6 +39,9 @@ const HeaderLink = styled.a`
   text-decoration: none;
   @media ${devices.tabs} {
     font-size: 18px;
+  }
+  @media ${devices.desktop} {
+    font-size: 20px;
   }
 `;
 

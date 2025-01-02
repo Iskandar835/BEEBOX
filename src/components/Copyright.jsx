@@ -7,12 +7,18 @@ const Container = styled.div`
   align-items: center;
   gap: 10px;
   margin: 80px 0 0 0;
+  @media ${devices.desktop} {
+    margin: 110px 0 0 0;
+  }
 `;
 const Text = styled.p`
   font-size: 10px;
   font-family: var(--title-font-family);
   @media ${devices.tabs} {
     font-size: 13px;
+  }
+  @media ${devices.desktop} {
+    font-size: 15px;
   }
 `;
 

@@ -18,11 +18,20 @@ const Section = styled.section`
   @media ${devices.tabs} {
     padding: 80px 20px 0 20px;
   }
+  @media ${devices.desktop} {
+    bottom: 0;
+    padding: 130px 20px 200px 20px;
+    gap: 90px;
+    border-radius: 0;
+  }
 `;
 const Title = styled(TitleH2)`
   font-size: 20px;
   @media ${devices.tabs} {
     font-size: 25px;
+  }
+  @media ${devices.desktop} {
+    font-size: 30px;
   }
 `;
 const Container = styled.div`

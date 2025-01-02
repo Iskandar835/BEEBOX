@@ -1,5 +1,6 @@
 //** All this component is for an use-friendly style **
 import { createGlobalStyle } from "styled-components";
+import { devices } from "./Breakpoints";
 
 const GlobalStyle = createGlobalStyle` 
     html {
@@ -27,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
         color: var(--first-font-color);
         text-decoration: none;
         background-color: var(--first-bg-color);
+        @media ${devices.desktop} {
+            background-color: var(--secondary-bg-color);
+            overflow-x: hidden;
+        }
     }
 `;
 

@@ -23,9 +23,16 @@ const Button = styled.button`
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.9);
     cursor: pointer;
   }
-  @media ${devices.tabs} {
+  @media ${devices.tabsAndDesktop} {
     padding: 15px 28px;
     font-size: 20px;
+  }
+  @media ${devices.desktop} {
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+    }
   }
 `;
 
