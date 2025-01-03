@@ -1,8 +1,9 @@
-# React + Vite
+# Voici BEEBOX !
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Un projet réel que j'ai réalisé pour un ami ❤️
 
-Currently, two official plugins are available:
+#### Un site mobile first entièrement fonctionnel disponible via ce lien :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##### https://iskandar835.github.io/BEEBOX/
+
+P.S. : Si vous souhaitez goûter les produits disponibles, n'hésitez pas à ajouter le Snapchat mentionné sur le site !
