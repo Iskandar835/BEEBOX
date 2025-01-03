@@ -43,7 +43,7 @@ const HeaderLink = styled.a`
 function Header() {
   return (
     <Container>
-      <HeaderLogo to={"/"}>BEEBOX</HeaderLogo>
+      <HeaderLogo to={"/BEEBOX"}>BEEBOX</HeaderLogo>
       <HeaderLink href="#contact">Contact</HeaderLink>
     </Container>
   );

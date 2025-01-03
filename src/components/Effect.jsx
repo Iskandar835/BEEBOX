@@ -23,7 +23,7 @@ const Img = styled.img`
 function HoneyEffect({ source, alt }) {
   return (
     <Container>
-      <Img src={source} alt={alt} />
+      <Img src={`${import.meta.env.BASE_URL}` + source} alt={alt} />
     </Container>
   );
 }

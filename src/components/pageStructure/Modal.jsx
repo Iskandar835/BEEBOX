@@ -87,7 +87,10 @@ function TheModal({ closeModal }) {
               s&apos;occupe de tout !
             </Title>
             <Border></Border>
-            <Img src={snapchat[0].qrcode} alt={snapchat[0].alt} />
+            <Img
+              src={`${import.meta.env.BASE_URL}` + snapchat[0].qrcode}
+              alt={snapchat[0].alt}
+            />
           </TitleAndImg>
         </ModalContent>
       </Modal>

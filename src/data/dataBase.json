@@ -5,12 +5,12 @@
             "name": "power",
             "title": "effort physique",
             "ingredients": ["miel blanc du kirghiztan", "macabio du pérou", "ginseng sibérien", "gingembre", "tribulus terrestris", "gelée royale"],
-            "stick": "../../assets/POWER-STICK.png",
+            "stick": "/assets/POWER-STICK.png",
             "stickAlt": "Image d'un stick de miel",
-            "box": "../../assets/POWER-BOX.png",
+            "box": "/assets/POWER-BOX.png",
             "boxAlt": "Image d'une boite remplie de stick de miel",
             "effects": {
-                "images": ["../../assets/POWER-BATTERY.png", "../../assets/POWER-BRAIN.png", "../../assets/POWER-QUALITY.png"],
+                "images": ["/assets/POWER-BATTERY.png", "/assets/POWER-BRAIN.png", "/assets/POWER-QUALITY.png"],
                 "alt": ["Image d'effet énergisant", "Image de sensation de bien-être", "Image représentant une qualité supérieure"]
             }
         },
@@ -19,12 +19,12 @@
             "name": "lover",
             "title": "énergie sexuelle",
             "ingredients": ["miel rose de russie", "macabio du pérou", "ginseng sibérien", "gingembre", "tribulus terrestris", "gelée royale"],
-            "stick": "../../assets/LOVER-STICK.png",
+            "stick": "/assets/LOVER-STICK.png",
             "stickAlt": "Image d'un stick de miel",
-            "box": "../../assets/LOVER-BOX.png",
+            "box": "/assets/LOVER-BOX.png",
             "boxAlt": "Image d'une boite remplie de stick de miel",
             "effects": {
-                "images": ["../../assets/LOVER-BATTERY.png", "../../assets/LOVER-BRAIN.png", "../../assets/LOVER-LIPS.png"],
+                "images": ["/assets/LOVER-BATTERY.png", "/assets/LOVER-BRAIN.png", "/assets/LOVER-LIPS.png"],
                 "alt": ["Image d'effet énergisant", "Image de sensation de bien-être", "Image d'effet aphrodisiaque"]
             }
         }
@@ -33,7 +33,7 @@
         {
             "id": "1",
             "name": "snapchat",
-            "qrcode": "../../assets/snapchat-qrcode.png",
+            "qrcode": "/assets/snapchat-qrcode.png",
             "alt":"Image du qr code snapchat de BEEBOX"
         }
     ]

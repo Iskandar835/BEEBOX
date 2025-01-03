@@ -19,7 +19,7 @@ const Image = styled.img`
 function HoneyStick({ source, alt }) {
   return (
     <>
-      <Image src={source} alt={alt} />
+      <Image src={`${import.meta.env.BASE_URL}` + source} alt={alt} />
     </>
   );
 }

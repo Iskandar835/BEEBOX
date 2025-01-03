@@ -40,7 +40,7 @@ const Img = styled.img`
 function HoneyButton({ href, source, alt }) {
   return (
     <Container to={href}>
-      <Img src={source} alt={alt} />
+      <Img src={`${import.meta.env.BASE_URL}` + source} alt={alt} />
     </Container>
   );
 }

@@ -63,7 +63,7 @@ const Text = styled.p`
 function Card({ source, alt, id, title, subtitle, text }) {
   return (
     <Container>
-      <Img src={source} alt={alt} />
+      <Img src={`${import.meta.env.BASE_URL}` + source} alt={alt} />
       <TextContent>
         <TitleCard id={id}>{title}</TitleCard>
         <SubtitleCard>{subtitle}</SubtitleCard>

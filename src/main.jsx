@@ -15,7 +15,7 @@ createRoot(document.getElementById("root")).render(
       <BeOnTop />
       <Header />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/BEEBOX" element={<Homepage />} />
         <Route path="/honeys/:id" element={<HoneysPage />} />
       </Routes>
       <Footer />
