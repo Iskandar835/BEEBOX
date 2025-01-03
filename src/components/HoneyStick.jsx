@@ -7,16 +7,20 @@ const Image = styled.img`
   bottom: 90px;
   width: 150px;
   @media ${devices.tabs} {
-    width: 170px;
     bottom: 100px;
+    width: 170px;
+  }
+  @media ${devices.desktop} {
+    bottom: 120px;
+    width: 200px;
   }
 `;
 
 function HoneyStick({ source, alt }) {
   return (
-    <div>
+    <>
       <Image src={source} alt={alt} />
-    </div>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../utils/Breakpoints";
 import { TitleH4 } from "../../utils/Titles";
 import Data from "../../data/dataBase.json";
 import PropTypes from "prop-types";
@@ -6,11 +7,11 @@ import PropTypes from "prop-types";
 const ModalContainer = styled.div`
   position: fixed;
   z-index: 10;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
 `;
@@ -21,7 +22,6 @@ const ModalOverlay = styled.div`
   height: 100%;
   backdrop-filter: blur(15px);
   --webkit-backdrop-filter: blur(15px);
-  transition: display 500ms 200ms ease-in;
 `;
 const Modal = styled.div`
   position: absolute;
@@ -31,7 +31,10 @@ const Modal = styled.div`
   background-color: var(--secondary-bg-color);
   border: 3px solid #ffffff;
   border-radius: 20px;
-  transition: display 400ms ease-out;
+  @media ${devices.desktop} {
+    width: 350px;
+    height: 460px;
+  }
 `;
 const ModalContent = styled.div`
   display: flex;
@@ -41,12 +44,21 @@ const ModalContent = styled.div`
 const Icon = styled.i`
   font-size: 20px;
   text-align: right;
+  @media ${devices.desktop} {
+    font-size: 23px;
+    cursor: pointer;
+  }
 `;
 const TitleAndImg = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+`;
+const Title = styled(TitleH4)`
+  @media ${devices.desktop} {
+    font-size: 19px;
+  }
 `;
 const Border = styled.div`
   width: 60%;
@@ -70,10 +82,10 @@ function TheModal({ closeModal }) {
             className="fa-solid fa-arrow-right-from-bracket"
           ></Icon>
           <TitleAndImg>
-            <TitleH4>
+            <Title>
               Nos commandes se passent sur Snapchat : ajoutez-nous, et on
               s&apos;occupe de tout !
-            </TitleH4>
+            </Title>
             <Border></Border>
             <Img src={snapchat[0].qrcode} alt={snapchat[0].alt} />
           </TitleAndImg>

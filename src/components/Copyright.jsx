@@ -6,10 +6,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 80px 0 0 0;
-  @media ${devices.desktop} {
-    margin: 110px 0 0 0;
-  }
 `;
 const Text = styled.p`
   font-size: 10px;

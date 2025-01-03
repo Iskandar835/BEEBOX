@@ -13,11 +13,11 @@ import ModalButton from "../components/ModalButton";
 const getColorById = ({ id }) =>
   id === "1" ? "var(--primary-color)" : "var(--secondary-color)";
 
-const Section = styled.section`
+const Main = styled.main`
   padding: 100px 0 0 0;
   background: var(--secondary-bg-color);
 `;
-const TitleContainer = styled.div`
+const TitleContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +25,18 @@ const TitleContainer = styled.div`
   @media ${devices.tabs} {
     margin: 0 0 150px 0;
   }
+  @media ${devices.desktop} {
+    margin: 0 0 180px 0;
+  }
 `;
 const BrandTitle = styled.p`
   margin: 0;
   font-size: 17px;
   @media ${devices.tabs} {
     font-size: 20px;
+  }
+  @media ${devices.desktop} {
+    font-size: 23px;
   }
 `;
 const Name = styled(TitleH1)`
@@ -40,14 +46,25 @@ const Name = styled(TitleH1)`
   @media ${devices.tabs} {
     font-size: 40px;
   }
+  @media ${devices.desktop} {
+    font-size: 45px;
+  }
 `;
-const CaracteristicsContainer = styled.div`
+const CaracteristicsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--first-bg-color);
   border-top: 5px solid ${getColorById};
   border-radius: 180px 180px 0 0;
+  @media ${devices.desktop} {
+    padding: 0 50px 180px 50px;
+  }
+  @media ${devices.XlDesktop} {
+    border-radius: 180px;
+    margin-bottom: 150px;
+    border: 5px solid ${getColorById};
+  }
 `;
 const SubtitleContainer = styled.div`
   position: relative;
@@ -63,22 +80,34 @@ const Subtitle = styled(TitleH2)`
   @media ${devices.tabs} {
     font-size: 33px;
   }
+  @media ${devices.desktop} {
+    font-size: 38px;
+  }
 `;
 const Icon = styled.i`
   font-size: 30px;
+  @media ${devices.desktop} {
+    font-size: 35px;
+  }
 `;
 const EffectContainer = styled.div`
   display: flex;
-  justify-content: center;
-  width: 100%;
   gap: 35px;
+  @media ${devices.desktop} {
+    gap: 55px;
+    margin: 35px 0 0 0;
+  }
 `;
-const BoxContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 100px 0 0 0;
+const IngredientsContainer = styled.div`
+  margin: 70px 0 0 0;
+  padding: 0 35px;
+  text-align: center;
+  @media ${devices.desktop} {
+    margin: 100px 0 0 0;
+    padding: 0 300px;
+  }
 `;
-const ContactSection = styled.div`
+const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,8 +116,23 @@ const ContactSection = styled.div`
   padding: 0 35px;
   text-align: center;
   @media ${devices.tabs} {
-    margin: 150px 0 0 0;
     gap: 60px;
+  }
+  @media ${devices.desktop} {
+    margin: 0;
+    justify-content: center;
+  }
+`;
+const CardAndButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 0 0;
+  @media ${devices.desktop} {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin: 150px 0 0 0;
   }
 `;
 
@@ -98,7 +142,7 @@ function HoneysPage() {
   const honey = data.find((honey) => honey.id === id);
 
   return (
-    <Section>
+    <Main>
       <TitleContainer>
         <BrandTitle>B E E B O X</BrandTitle>
         <Name id={id}>{honey.name}</Name>
@@ -122,16 +166,25 @@ function HoneysPage() {
             />
           ))}
         </EffectContainer>
-        <Ingredients content={honey.ingredients.join(", ")} />
-        <BoxContainer>
-          <Card source={honey.box} alt={honey.boxAlt} id={id} />
-        </BoxContainer>
-        <ContactSection>
-          <TitleH3>Vous souhaitez en savoir plus sur nos produits ?</TitleH3>
-          <ModalButton id={id} content={"Cliquez ici !"} />
-        </ContactSection>
+        <IngredientsContainer>
+          <Ingredients content={honey.ingredients.join(", ")} />
+        </IngredientsContainer>
+        <CardAndButton>
+          <Card
+            source={honey.box}
+            alt={honey.boxAlt}
+            id={id}
+            title={"T H E B O X"}
+            subtitle={"Plus de quantité ?"}
+            text={"Découvrez nos box x28 sticks !"}
+          />
+          <ContactContainer>
+            <TitleH3>Vous souhaitez en savoir plus sur nos produits ?</TitleH3>
+            <ModalButton id={id} content={"Cliquez ici !"} />
+          </ContactContainer>
+        </CardAndButton>
       </CaracteristicsContainer>
-    </Section>
+    </Main>
   );
 }
 export default HoneysPage;

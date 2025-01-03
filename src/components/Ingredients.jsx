@@ -2,30 +2,31 @@ import styled from "styled-components";
 import { devices } from "../utils/Breakpoints";
 import PropTypes from "prop-types";
 
-const Container = styled.div`
-  margin: 70px 0 0 0;
-  padding: 0 35px;
-  text-align: center;
-`;
 const Title = styled.p`
   margin: 0;
   font-size: 17px;
   @media ${devices.tabs} {
     font-size: 20px;
   }
+  @media ${devices.desktop} {
+    font-size: 23px;
+  }
 `;
 const Text = styled.p`
   @media ${devices.tabs} {
     font-size: 18px;
   }
+  @media ${devices.desktop} {
+    font-size: 21px;
+  }
 `;
 
 function Ingredients({ content }) {
   return (
-    <Container>
+    <>
       <Title>Ingrédients :</Title>
       <Text>{content}</Text>
-    </Container>
+    </>
   );
 }
 

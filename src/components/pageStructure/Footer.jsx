@@ -10,12 +10,7 @@ const FooterSection = styled.footer`
   text-align: center;
   background: var(--tertiary-bg-color);
   @media ${devices.desktop} {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
     margin: 0;
-    padding: 80px 0 10px 0;
   }
 `;
 const TextContainer = styled.div`
@@ -23,7 +18,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   gap: 15px;
   @media ${devices.desktop} {
-    gap: 35px;
+    gap: 20px;
   }
 `;
 const Title = styled(TitleH3)`
@@ -39,14 +34,14 @@ const Text = styled.p`
     font-size: 20px;
   }
 `;
-const ArrowDown = styled.i`
+const Icon = styled.i`
   margin-top: 10px;
   font-size: 30px;
   @media ${devices.tabs} {
     font-size: 33px;
   }
   @media ${devices.desktop} {
-    font-size: 40px;
+    display: none;
   }
 `;
 const ButtonContainer = styled.div`
@@ -54,6 +49,9 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 35px 0;
+  @media ${devices.tabsAndDesktop} {
+    margin: 35px 0 75px 0;
+  }
 `;
 
 function Footer() {
@@ -68,7 +66,7 @@ function Footer() {
           Commandez facilement via Snapchat en nous contactant directement pour
           une expérience rapide et personnalisée.
         </Text>
-        <ArrowDown className="fa-regular fa-circle-down"></ArrowDown>
+        <Icon className="fa-regular fa-circle-down"></Icon>
       </TextContainer>
       <ButtonContainer>
         <ModalButton id={"contact"} content={"Nous contacter"} />

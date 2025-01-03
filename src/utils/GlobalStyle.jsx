@@ -21,8 +21,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        max-width: 1440px;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
         font-family: var(--text-font-family); 
         color: var(--first-font-color);
@@ -30,8 +29,12 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--first-bg-color);
         @media ${devices.desktop} {
             background-color: var(--secondary-bg-color);
-            overflow-x: hidden;
         }
+    }
+    
+    main {
+        max-width: 1440px;
+        margin: 0 auto;
     }
 `;
 

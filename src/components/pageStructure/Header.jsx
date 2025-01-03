@@ -13,12 +13,7 @@ const Container = styled.header`
   background: var(--first-bg-color);
   box-shadow: 0 5px 10px var(--tertiary-bg-color);
   @media ${devices.desktop} {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    padding: 20px 50px;
-    box-sizing: border-box;
+    padding: 20px 40px;
   }
 `;
 const HeaderLogo = styled(Link)`
